@@ -1,0 +1,62 @@
+﻿<!-- ===== WPF 16 – Úloha: dokonči kasu =====
+     Pojem: samostatná práca: doplniť dve tlačidlá a tlačidlo Nový zákazník
+     Skús zmeniť:
+       1. Dokonči metódy označené TODO.
+       2. Skontroluj súčet na kalkulačke pre aspoň 3 položky.
+       3. Pridaj vlastný tovar s vlastným obrázkom.
+       4. Pridaj zľavu alebo ďalšiu funkciu podľa fantázie.
+-->
+<Window x:Class="Wpf16_CashierStarter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Kasa – úloha" Height="470" Width="680">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Ľavá strana: tlačidlá s tovarom (obrázok a text) -->
+        <UniformGrid Grid.Column="0" Columns="2" Margin="0,0,10,0">
+            <Button x:Name="btnRoll" Margin="3" Click="BtnRoll_Click">
+                <StackPanel>
+                    <Image Source="Images/roll.png" Width="64" Height="64"/>
+                    <TextBlock Text="Rožok  0,30 €" HorizontalAlignment="Center" FontSize="16"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnKetchup" Margin="3" Click="BtnKetchup_Click">
+                <StackPanel>
+                    <Image Source="Images/ketchup.png" Width="64" Height="64"/>
+                    <TextBlock Text="Kečup  0,80 €" HorizontalAlignment="Center" FontSize="16"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnHotdog" Margin="3" Click="BtnHotdog_Click">
+                <StackPanel>
+                    <Image Source="Images/hotdog.png" Width="64" Height="64"/>
+                    <TextBlock Text="Párok  1,20 €" HorizontalAlignment="Center" FontSize="16"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnCola" Margin="3" Click="BtnCola_Click">
+                <StackPanel>
+                    <Image Source="Images/cola.png" Width="64" Height="64"/>
+                    <TextBlock Text="Cola  1,50 €" HorizontalAlignment="Center" FontSize="16"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnTea" Margin="3" Click="BtnTea_Click">
+                <StackPanel>
+                    <Image Source="Images/tea.png" Width="64" Height="64"/>
+                    <TextBlock Text="Čaj  1,00 €" HorizontalAlignment="Center" FontSize="16"/>
+                </StackPanel>
+            </Button>
+        </UniformGrid>
+
+        <!-- Pravá strana: bloček a súčet -->
+        <DockPanel Grid.Column="1">
+            <Button x:Name="btnNew" DockPanel.Dock="Bottom" Content="Nový zákazník" Height="40" Margin="0,8,0,0" FontSize="16" Click="BtnNew_Click"/>
+            <Label x:Name="lblTotal" DockPanel.Dock="Bottom" Content="Spolu: 0,00 €" FontSize="22" FontWeight="Bold" Margin="0,8,0,0"/>
+            <Border BorderBrush="Gray" BorderThickness="1" Background="WhiteSmoke">
+                <TextBlock x:Name="txtReceipt" FontFamily="Consolas" FontSize="16" Margin="8"/>
+            </Border>
+        </DockPanel>
+    </Grid>
+</Window>

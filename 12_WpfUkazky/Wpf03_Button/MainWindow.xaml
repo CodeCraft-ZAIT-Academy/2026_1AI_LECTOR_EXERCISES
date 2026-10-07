@@ -1,0 +1,18 @@
+﻿<!-- ===== WPF 03 – Tlačidlo a udalosť Click =====
+     Pojem: Button, x:Name, Click, premenná v triede
+     Skús zmeniť:
+       1. Pridaj tlačidlo +10, ktoré zvýši počet o 10.
+       2. Zmeň text, ktorý sa vypíše po kliknutí.
+       3. Pridaj druhý Label, ktorý zobrazí dvojnásobok počtu kliknutí.
+       4. Zmaž metódu v C# a nechaj atribút Click vo XAML – čo povie kompilátor?
+-->
+<Window x:Class="Wpf03_Button.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tlačidlo" Height="260" Width="420">
+    <StackPanel Margin="20">
+        <Label x:Name="lblMessage" Content="Zatiaľ si nekliol." FontSize="22"/>
+        <Button x:Name="btnClick" Content="Klikni na mňa" FontSize="20" Height="50" Click="BtnClick_Click"/>
+        <Button x:Name="btnReset" Content="Reset" FontSize="20" Height="40" Margin="0,10,0,0" Click="BtnReset_Click"/>
+    </StackPanel>
+</Window>

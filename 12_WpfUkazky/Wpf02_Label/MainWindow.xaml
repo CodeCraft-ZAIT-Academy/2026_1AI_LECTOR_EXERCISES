@@ -1,0 +1,22 @@
+﻿<!-- ===== WPF 02 – Label a TextBlock =====
+     Pojem: Label (Content), TextBlock (Text), vlastnosti písma a farby
+     Skús zmeniť:
+       1. Zmeň FontSize, FontWeight (Bold), FontStyle (Italic), FontFamily.
+       2. Zmeň Foreground a Background (farby).
+       3. Pridaj ďalší Label s vlastným textom.
+       4. Skús zúžiť okno – ktorý text sa zalomí a ktorý nie?
+-->
+<Window x:Class="Wpf02_Label.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Label a TextBlock" Height="380" Width="520">
+    <StackPanel Margin="20">
+        <Label Content="Label – obyčajný popisok" FontSize="20"/>
+        <Label Content="Tučné a červené" FontWeight="Bold" Foreground="Red" FontSize="20"/>
+        <Label Content="Label s pozadím a vnútornou medzerou" Background="LightGreen" Padding="10" FontSize="20"/>
+        <Label Content="Kurzíva, písmo Consolas" FontStyle="Italic" FontFamily="Consolas" FontSize="20"/>
+        <TextBlock Text="TextBlock vie zalomiť dlhší text na viac riadkov, ak mu to povolíme vlastnosťou TextWrapping. Skús zúžiť okno."
+                   TextWrapping="Wrap" FontSize="16" Margin="5,15,5,5"/>
+        <Label Content="Label sa takto nezalomí, text ostane na jednom riadku, aj keď je dlhý."/>
+    </StackPanel>
+</Window>

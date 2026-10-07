@@ -1,0 +1,30 @@
+﻿<!-- ===== WPF 11 – Mini aplikácia: počítadlo =====
+     Pojem: viac tlačidiel, spoločná metóda, premenná v triede
+     Skús zmeniť:
+       1. Pridaj tlačidlo −10.
+       2. Pridaj tlačidlo „Zdvojnásobiť“ (count = count * 2).
+       3. Pridaj druhý Label, ktorý ukazuje, koľkokrát sa tlačidlá stlačili (nový počítač kliknutí).
+       4. Zmeň farbu čísla pomocou Foreground.
+-->
+<Window x:Class="Wpf11_Counter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Počítadlo" Height="300" Width="420">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="lblCount" Grid.Row="0" Content="0" FontSize="72" FontWeight="Bold"
+               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <UniformGrid Grid.Row="1" Columns="3" Margin="0,0,0,8">
+            <Button Content="−1" FontSize="24" Height="50" Margin="3" Click="BtnMinus_Click"/>
+            <Button Content="+1" FontSize="24" Height="50" Margin="3" Click="BtnPlus_Click"/>
+            <Button Content="+10" FontSize="24" Height="50" Margin="3" Click="BtnPlusTen_Click"/>
+        </UniformGrid>
+        <Button Grid.Row="2" Content="Reset" FontSize="18" Height="40" Margin="3" Click="BtnReset_Click"/>
+    </Grid>
+</Window>

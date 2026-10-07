@@ -1,0 +1,29 @@
+﻿<!-- ===== WPF 09 – Vlastnosti prvkov v C# kóde =====
+     Pojem: zmena FontSize, Foreground, Visibility, IsEnabled, Width z kódu
+     Skús zmeniť:
+       1. Pridaj tlačidlo, ktoré nastaví Foreground na Green.
+       2. Pridaj tlačidlo na zmenu Background popisku (lblDemo.Background = Brushes.Yellow).
+       3. Zmeň násobok pri zväčšovaní z 1.25 na 2.
+       4. Pridaj tlačidlo, ktoré zmení text popisku na tvoje meno.
+-->
+<Window x:Class="Wpf09_PropertiesInCode.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Vlastnosti v kóde" Height="380" Width="520">
+    <StackPanel Margin="20">
+        <Label x:Name="lblDemo" Content="Mením sa!" FontSize="28" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+        <TextBox x:Name="txtDemo" Text="Šírka poľa" Width="160" Margin="0,0,0,15"/>
+
+        <UniformGrid Columns="2">
+            <Button Content="Zväčšiť písmo" Height="36" Margin="3" Click="BtnBigger_Click"/>
+            <Button Content="Zmenšiť písmo" Height="36" Margin="3" Click="BtnSmaller_Click"/>
+            <Button Content="Červená" Height="36" Margin="3" Click="BtnRed_Click"/>
+            <Button Content="Modrá" Height="36" Margin="3" Click="BtnBlue_Click"/>
+            <Button Content="Skryť popisok" Height="36" Margin="3" Click="BtnHide_Click"/>
+            <Button Content="Zobraziť popisok" Height="36" Margin="3" Click="BtnShow_Click"/>
+            <Button Content="Rozšíriť pole" Height="36" Margin="3" Click="BtnWider_Click"/>
+            <Button x:Name="btnDisable" Content="Zablokovať toto tlačidlo" Height="36" Margin="3" Click="BtnDisable_Click"/>
+        </UniformGrid>
+        <Button Content="Odblokovať" Height="36" Margin="3,10,3,3" Click="BtnEnable_Click"/>
+    </StackPanel>
+</Window>

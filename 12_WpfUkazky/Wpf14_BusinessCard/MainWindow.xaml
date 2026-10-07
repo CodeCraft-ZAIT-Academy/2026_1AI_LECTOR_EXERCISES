@@ -1,0 +1,42 @@
+﻿<!-- ===== WPF 14 – Mini aplikácia: vizitka =====
+     Pojem: viac TextBoxov, metóda s parametrami a návratovou hodnotou, \n v texte
+     Skús zmeniť:
+       1. Pridaj ďalšie pole (telefón) a pridaj ho do vizitky.
+       2. Zmeň formát vizitky (napr. vek v zátvorke za menom).
+       3. Zmeň písmo vizitky a pozadie rámčeka.
+       4. Pridaj obrázok (smajlíka) do vizitky.
+-->
+<Window x:Class="Wpf14_BusinessCard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Vizitka" Height="470" Width="500">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Meno:" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtFirstName" Grid.Row="0" Grid.Column="1" Margin="5" Padding="3"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Priezvisko:" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtLastName" Grid.Row="1" Grid.Column="1" Margin="5" Padding="3"/>
+        <Label Grid.Row="2" Grid.Column="0" Content="Vek:" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtAge" Grid.Row="2" Grid.Column="1" Margin="5" Padding="3"/>
+        <Label Grid.Row="3" Grid.Column="0" Content="Mesto:" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtCity" Grid.Row="3" Grid.Column="1" Margin="5" Padding="3"/>
+
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="Vytvoriť vizitku" Height="38" Margin="5,10,5,10" Click="BtnCreate_Click"/>
+
+        <Border Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="SteelBlue" BorderThickness="2" Background="AliceBlue" Padding="12" Margin="5">
+            <TextBlock x:Name="txtCard" FontFamily="Consolas" FontSize="18"/>
+        </Border>
+    </Grid>
+</Window>

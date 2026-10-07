@@ -1,0 +1,38 @@
+﻿<!-- ===== WPF 08 – Rozloženie: Grid =====
+     Pojem: Grid (riadky a stĺpce), Grid.Row, Grid.Column, Grid.ColumnSpan, Auto a *
+     Skús zmeniť:
+       1. Zmeň šírku stĺpca na 2* a sleduj, ako sa mení pomer.
+       2. Pridaj riadok s ďalším poľom (napr. mesto).
+       3. Zmeň Grid.ColumnSpan tlačidla na 1 – čo sa stane?
+       4. Pridaj do Gridu Image do pravého horného rohu.
+-->
+<Window x:Class="Wpf08_Grid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Grid – registračný formulár" Height="330" Width="480">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Registrácia" FontSize="24" FontWeight="Bold"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Meno:" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtName" Grid.Row="1" Grid.Column="1" Margin="5" Padding="3"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="E-mail:" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtEmail" Grid.Row="2" Grid.Column="1" Margin="5" Padding="3"/>
+
+        <Button x:Name="btnSend" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="Registrovať" Height="36" Margin="5,10,5,5" Click="BtnSend_Click"/>
+
+        <Label x:Name="lblResult" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="" FontSize="16"/>
+    </Grid>
+</Window>

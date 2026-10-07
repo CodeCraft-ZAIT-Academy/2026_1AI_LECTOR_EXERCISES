@@ -1,0 +1,30 @@
+﻿<!-- ===== WPF 10 – Udalosti: Click, TextChanged, MouseEnter, Loaded, sender =====
+     Pojem: iné udalosti než Click, parameter sender
+     Skús zmeniť:
+       1. Zmeň texty pri MouseEnter a MouseLeave.
+       2. Pridaj do TextChanged výpis textu veľkými písmenami: txtInput.Text.ToUpper().
+       3. Pridaj štvrté tlačidlo „Žlté“ k trom farebným.
+       4. Zisti, aké ďalšie udalosti ponúka Button v okne Properties (ikona blesku).
+-->
+<Window x:Class="Wpf10_Events.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Udalosti" Height="420" Width="480" Loaded="Window_Loaded">
+    <StackPanel Margin="20">
+        <Label x:Name="lblStatus" Content="" FontSize="14" Foreground="Gray"/>
+
+        <Label Content="Píš do políčka (udalosť TextChanged):" Margin="0,10,0,0"/>
+        <Label x:Name="lblLength" Content="Počet znakov: 0" FontWeight="Bold"/>
+        <TextBox x:Name="txtInput" FontSize="18" TextChanged="TxtInput_TextChanged"/>
+
+        <Button x:Name="btnHover" Content="Nabehni na mňa myšou" Height="45" Margin="0,20,0,0"
+                MouseEnter="BtnHover_MouseEnter" MouseLeave="BtnHover_MouseLeave"/>
+
+        <Label x:Name="lblSender" Content="Klikni na niektoré tlačidlo:" Margin="0,20,0,0"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Červené" Width="100" Height="36" Click="AnyButton_Click"/>
+            <Button Content="Zelené" Width="100" Height="36" Margin="10,0,0,0" Click="AnyButton_Click"/>
+            <Button Content="Modré" Width="100" Height="36" Margin="10,0,0,0" Click="AnyButton_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
