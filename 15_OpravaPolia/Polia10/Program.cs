@@ -3,4 +3,4 @@
 //   3
 
 int[,] matrix = { { 1, 2 }, { 3, 4 } };
-Console.WriteLine(matrix[1][0]);
+Console.WriteLine(matrix[1,0]);

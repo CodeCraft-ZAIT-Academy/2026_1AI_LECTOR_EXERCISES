@@ -4,6 +4,7 @@
 
 // Vymeň prvý a druhý prvok poľa.
 int[] numbers = { 10, 20, 30 };
+int temp = numbers[0];
 numbers[0] = numbers[1];
-numbers[1] = numbers[0];
+numbers[1] = temp;
 Console.WriteLine(string.Join(", ", numbers));

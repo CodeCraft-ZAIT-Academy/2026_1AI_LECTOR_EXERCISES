@@ -9,5 +9,5 @@ Console.WriteLine(GetLength(new int[0]));
 
 static int GetLength(int[] array)
 {
-    return array.Length - 1;
+    return array.Length;
 }

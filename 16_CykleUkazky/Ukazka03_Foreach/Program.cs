@@ -31,3 +31,8 @@ foreach (char letter in "Hello")
     Console.Write(letter + "-");
 }
 Console.WriteLine();
+
+foreach (char letter in "Hello world!")
+{
+    Console.WriteLine(letter);
+}

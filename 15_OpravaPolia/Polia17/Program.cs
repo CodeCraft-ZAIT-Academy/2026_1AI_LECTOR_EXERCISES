@@ -4,4 +4,4 @@
 
 // Vypíš prvý prvok poľa.
 int[] numbers = { 10, 20, 30, 40, 50 };
-Console.WriteLine(numbers[1]);
+Console.WriteLine(numbers[0]);

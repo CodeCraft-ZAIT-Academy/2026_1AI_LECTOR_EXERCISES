@@ -2,6 +2,6 @@
 // Očakávaný výstup:
 //   Jello
 
-string message = "Hello";
-message[0] = 'J';
+string message = "zello";
+message = "Jello";
 Console.WriteLine(message);

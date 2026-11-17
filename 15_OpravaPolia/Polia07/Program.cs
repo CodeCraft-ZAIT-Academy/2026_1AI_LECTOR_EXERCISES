@@ -2,5 +2,5 @@
 // Očakávaný výstup:
 //   3
 
-int[] numbers = new int[3] { 10, 20 };
+int[] numbers = new int[3] { 10, 20, 30 };
 Console.WriteLine(numbers.Length);

@@ -3,7 +3,7 @@
 //   1, 2, 3, 4
 
 // Do poľa uložíme štyri čísla.
-int[] numbers = new int[3];
+int[] numbers = new int[4];
 numbers[0] = 1;
 numbers[1] = 2;
 numbers[2] = 3;

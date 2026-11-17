@@ -3,4 +3,4 @@
 //   20
 
 int[] numbers = { 10, 20, 30 };
-Console.WriteLine(numbers["1"]);
+Console.WriteLine(numbers[1]);

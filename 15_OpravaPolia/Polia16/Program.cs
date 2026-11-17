@@ -4,4 +4,4 @@
 
 // Vypíš posledný znak reťazca.
 string message = "Hello, World!";
-Console.WriteLine(message[message.Length]);
+Console.WriteLine(message[message.Length - 1]);

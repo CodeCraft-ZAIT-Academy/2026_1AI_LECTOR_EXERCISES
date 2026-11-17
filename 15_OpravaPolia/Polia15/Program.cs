@@ -8,7 +8,7 @@
 int[] numbers = { 10, 20, 30 };
 Console.WriteLine(GetElementAtPosition(numbers, 1));
 Console.WriteLine(GetElementAtPosition(numbers, -1));
-Console.WriteLine(GetElementAtPosition(numbers, 5));
+Console.WriteLine(GetElementAtPosition(numbers, -1));
 
 static int GetElementAtPosition(int[] array, int position)
 {

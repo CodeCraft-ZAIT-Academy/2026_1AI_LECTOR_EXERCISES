@@ -4,4 +4,4 @@
 
 // Vypíš posledný prvok poľa.
 int[] numbers = { 10, 20, 30, 40, 50 };
-Console.WriteLine(numbers[numbers.Length - 2]);
+Console.WriteLine(numbers[numbers.Length - 1]);
